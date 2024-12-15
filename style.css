@@ -1,0 +1,1184 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #000;
+}
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 2.2s;
+}
+.hidden2{
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 3s;
+}
+.hidden3{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: all 3s;
+}
+.hidden4{
+    opacity: 0;
+    filter: blur(5px);
+   transform: scaleX(10%);
+    transition: all 3s;
+}
+.hidden5{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(100%);
+    transition: all 4s;
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0)
+}
+#contact, #works, #about{
+    transition: 3s;
+}
+.first{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #000;
+    background-image: url(https://artincontext.org/wp-content/uploads/2022/06/Famous-Greek-Mythology-Paintings.jpg);
+    padding-bottom: 4rem;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 96%;
+    padding: 2rem;
+    margin: 0 2rem;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 2rem;
+    background: -webkit-linear-gradient(0deg, #fff, #fff);
+    background-clip: text;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    backdrop-filter: blur(90px) !important;
+}
+nav h6{
+    font-size: 1.5rem;
+    color: #f5eee6;
+    font-weight: 900;
+    text-decoration: none;
+
+}
+nav div{
+    display: flex;
+    gap: 2rem;
+    align-items: baseline;
+}
+nav div h6{
+    font-size: 1.2rem;
+    color: #f5eee6;
+    cursor: pointer;
+    font-family: "Petrona", serif;
+    font-weight: 900;
+}
+nav div h4{
+    font-size: 1.2rem;
+    color: #f5eee6;
+    cursor: pointer;
+    font-family: "Neue Montreal", sans-serif;
+    font-weight: 600;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 0.7rem;
+    color: #f5eee6;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+nav ul li:hover{
+    text-decoration: line-through;
+    transition: all 1.3 ease;
+    cursor: pointer;
+}
+.hero{
+    display: flex;
+    justify-content: space-between;
+}
+.hero h3{
+    color: #f5eee6;
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-top: 14rem;
+    margin-left: 3rem;
+}
+.hero div{
+    margin-top: 6rem;
+    margin-right: 19rem;
+    display: flex;
+    align-items:    last baseline;
+    color: #f5eee6;
+}
+.hero #day-display{
+    font-size: 12rem;
+    font-family: "Monoton", sans-serif;
+   
+}
+.hero #month-display{
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-left: 1rem;
+}
+.hero div h4{
+    font-size: 1.3rem;
+    font-weight: 200;
+    margin-left: 1rem;
+}
+.availability{
+    color: #f5eee6;
+    font-size: 1.3rem;
+    cursor: pointer;
+    float: right;
+    font-weight: 500;
+    opacity: 0;
+    z-index: 1;
+    margin-right: 26rem;
+    font-family: "Neue Montreal", sans-serif;
+    margin-top: -2rem;
+
+}
+.availability:hover{
+    opacity: 1;
+    transition: all 0.4s ease 0s;
+    mix-blend-mode: luminosity;
+    visibility: visible;
+    z-index: 1;
+}
+.designer-developer{
+    color: #f5eee6;
+    display: flex;
+    margin-top: 4rem;
+    justify-content: space-between;
+    margin-left: 3rem;
+    transition-delay: 1s;
+}
+.designer-developer h1 span{
+    font-size: 3rem;
+    color: bisque;
+}
+.designer-developer h1{
+    color: #f5eee6;
+    font-size: 8vw;
+    font-family: "Anton", sans-serif;
+    font-weight: 500; 
+}
+.designer-developer div h4{
+    font-size: 1.875rem;
+    line-height: 1.3333;
+
+    line-height: 1.1;
+    margin-right: 1rem;
+    font-family: "Neue Montreal", sans-serif;
+}
+.designer-developer div h4 span{
+    float: right;
+}
+a{
+    text-decoration: none;
+    color: #f5eee6;
+}
+.button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+    float: right;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 0.3rem 0.7rem;
+    margin-top: 2rem;
+    border: 3px solid #f5eee6;
+    border-radius: 64px;
+    font-weight: 700;
+    font-size: 1.9rem;
+    overflow: hidden;
+    margin-right: 1rem;
+  }
+  
+  /* button styling */
+  .button {
+    --border-right: 6px;
+    --text-stroke-color: rgba(255,255,255,0.6);
+    --animation-color: #fff;
+    --fs-size: 1.6rem;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Neue Montreal", sans-serif;
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+  }
+  /* this is the text, when you hover on button */
+  .hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 1s;
+    -webkit-text-stroke: 1px var(--animation-color);
+  }
+  /* hover */
+  .button:hover .hover-text  {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+  }
+  .button:hover .actual-text{
+    opacity: 0;
+  }
+
+  .second{
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    padding-bottom: 6rem;
+    overflow-y: hidden;
+    height: auto;
+}
+
+.introduction{
+    display: flex;
+    color: #fff;
+    padding-top: 5rem;
+    justify-content: space-around;
+   
+}
+.introduction h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 6rem;
+    font-size: 4rem;
+}
+.introduction h6{
+    color: bisque;
+    font-size: 1.1rem;
+    float: right;
+}
+.introduction .line{
+    font-size: 1.775rem;
+    margin-right: 1rem;
+    font-family: "Neue Montreal", sans-serif;
+    margin-left: 6rem;
+    font-weight: 600;
+}
+.line1, .header, .linkedin{
+    transition-delay: 100ms;
+}
+.line2, .yandutse, .instagram{
+    transition-delay: 200ms;
+}
+.line3, .capital_science, .github{
+    transition-delay: 300ms;
+}
+.line4, .capital_science, .twitter{
+    transition-delay: 400ms;
+}
+.line5, .cornell_university, .snapchat{
+    transition-delay: 500ms;
+}
+.line6, .gmail{
+    transition-delay: 600ms;
+}
+.line7{
+    transition-delay: 700ms;
+}
+.line8{
+    transition-delay: 800ms;
+}
+.line9{
+    transition-delay: 900ms;
+}
+.line10{
+    transition-delay: 1000ms;
+}
+.line11{
+    transition-delay: 1100ms;
+}
+.line12{
+    transition-delay: 1200ms;
+}
+.line13{
+    transition-delay: 1300ms;
+}
+.line14{
+    transition-delay: 1400ms;
+}
+.introduction img{
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation-name: micheal;
+    animation-duration: 7s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    height: 100% !important;
+    width: 65%;
+    text-align: center;
+    align-items: center;
+}
+@keyframes micheal {
+    from{
+        transform: rotateY(0deg); }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+.languages{
+    display: flex;
+    justify-content: center;
+   margin-top: 7rem;
+}
+.languages i {
+    font-size: 5em;
+    overflow: hidden;
+    margin: 2rem;
+}
+.languages img{
+    width: 4rem;
+    height: 4rem;
+    margin: 2rem;
+}
+.projects{
+    color: #fff;
+    margin-top: 16rem;
+    margin-left: 10rem;
+    font-family: "Neue Montreal", sans-serif;
+}
+.selected{
+    display: flex;
+    overflow: hidden;
+}
+.selected h2{
+    font-size: 2rem;
+    overflow: hidden;
+    color: bisque;
+    font-family: "Neue Montreal", sans-serif;
+}
+.selected img, .hero img{
+    animation-name: star;
+    animation-duration: 7s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    overflow: hidden;
+    margin-right: 3rem;
+    width: 4.5rem;
+    height: 4.5rem;
+}
+@keyframes star {
+    from{
+        transform: rotate(0deg); }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.project{
+    margin-top: 8rem;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 2rem;
+}
+.project h1{
+    font-size: 2rem;
+    color: #fff;
+}
+.project h5{
+    color: #f5eee6;
+}
+.project img{
+    height: 23rem;
+    width: 45rem;
+    margin-right: 2rem;
+    margin-left: -1rem;
+    background-color: grey;
+}
+.project img:hover{
+    border: 15px solid #000;
+    opacity: 1;
+    transition: all 0.4s ease 0s;
+    mix-blend-mode: exclusion;
+    visibility: visible;
+    z-index: 1;
+}
+.project p {
+    width: 20rem;
+    text-wrap: balance;
+    font-weight: 600;
+    color: #f5eee6;
+    line-height: 1.5;
+   text-align: right;
+}
+.yes{
+    display: flex;
+    justify-content: center;
+    
+    align-items: first baseline;
+}
+.yes h3{
+    color: f5eee6;
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: "Petrona", serif;
+    margin-right: 2rem;
+}
+#see-more-page{
+    color: #fff;
+    padding: 1.3rem;
+    transform: translateY(-25rem);
+    background-color: #000;
+    opacity: 0;
+    filter: blur(3px);
+    transform: translateX(100%);
+    transition: all 5s;
+   position: static;
+   margin-left: 10%;
+   box-shadow: 0 0 10px rgba(0,0,0,.4);
+}
+.see-more-header{
+    font-family: "Neue Montreal", sans-serif;
+    display: flex;
+    justify-content: space-between;
+
+}
+.third{
+    background-image: url(https://artincontext.org/wp-content/uploads/2022/06/Famous-Greek-Mythology-Paintings.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3rem;
+
+}
+.education{  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.education .schools{
+    margin-top: 7rem;
+    margin-right: 3rem;
+    text-align: center;
+    width: 60%;
+}
+
+.header, .yandutse, .capital_science, .utiva, .cornell_university{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    font-family: "Neue Montreal", sans-serif;
+    color: f5eee6;
+    text-align: center;
+   
+}
+.education h1{
+    font-size: 5rem;
+    color: bisque;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+   
+}
+.connect{
+    display: flex;
+}
+.connect h1{
+    font-size: 8.4rem;
+    color: #f5eee6;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    margin-top: 18rem;
+}
+
+.connect p{
+    font-size: 3rem;
+    font-family: "Anton", sans-serif;
+    color: f5eee6;
+}
+.mind{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
+.minding h2{
+    color: #fff;
+    font-family: "Neue Montreal", sans-serif;
+    font-size: 2rem;
+}
+.btn-alt{
+    color: #000;
+    background-color: f5eee6;
+    cursor: pointer;
+    font-family: "Neue Montreal", sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+    width: auto;
+    height: auto;
+    padding: 0.3rem 0.7rem;
+    border-radius: 64px;
+    border: none;
+}
+.btn-alt:hover{
+    color: #f5eee6;
+    background-color: #000;
+    transition: all 0.4s ease 0s;
+    mix-blend-mode: multiply;
+    visibility: visible;
+    z-index: 1;
+}
+.links{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1.2rem;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Monoton", sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+    width: auto;
+    height: auto;
+    padding: 0.3rem 0.7rem;
+  
+    border: none;
+ 
+}
+.linkedin:hover{
+    color: green;
+}
+.instagram:hover{
+    color: purple;
+}
+.github:hover{
+    color: #000;
+}
+.twitter:hover{
+    color: green;
+}
+.snapchat:hover{
+    color: yellow;
+}
+.gmail:hover{
+    color: red;
+}
+.arrow, #arrow{
+    display: none;
+}
+#small-screen{
+    display: none;
+}
+@media screen and (max-width:349px){
+    body{
+        background-color: #000;
+    }
+    .first, .second, .third{
+        display: none;
+    }
+    #small-screen{
+        color: #fff;
+        display: block;
+
+        margin: 2rem;
+        font-size: 1.7rem;
+        font-family: "Neue Montreal", sans-serif;
+
+    }
+    #small-screen span{
+        color: bisque;
+        font-size: 1.4rem;
+        margin-top: 4rem;
+        float: right;
+    }
+}
+@media screen and (min-width:350px) and (max-width: 767px) {
+    .first{
+        background-position: bottom;
+    }
+    .third{
+        background-position: bottom;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        width: 100%;
+        padding: 1.4rem;
+        margin: 0 0;
+        align-items: last baseline;
+    }
+    nav h6{
+        font-size: 1.5rem;
+    
+    }
+    nav div{
+        display: block;
+    }
+    nav div h6{
+        font-size: 1.2rem;
+       
+    }
+    nav div h4{
+        font-size: 1rem;
+    }
+    nav ul{
+        font-size: 0.9rem;
+        margin-right: 0.6rem;
+        font-family: "Neue Montreal", sans-serif;
+    }
+    nav ul li{
+        margin-left: 0.6rem;
+    }
+    .hero{
+        display: flex;
+        justify-content: space-between;
+    }
+    .hero h3{
+        font-size: 1.7rem;
+        margin-top: 12rem;
+        margin-left: 2rem;
+    }
+    .hero div{
+        margin-top: 10rem;
+        margin-right: 2rem;
+    }
+    .hero #day-display{
+        font-size: 5rem;
+        font-family: "Monoton", sans-serif;
+       
+    }
+    .hero #month-display{
+        font-size: 1.4rem;
+        font-weight: 400;
+        margin-left: 0.6rem;
+    }
+    .hero div h4{
+        font-size: 1.2rem;
+        font-weight: 200;
+        margin-left: 0.6rem;
+    }
+    .availability{
+        font-size: 1rem;
+        margin-right: 3rem;
+        font-family: "Neue Montreal", sans-serif;
+        margin-top: -1rem;
+    
+    }
+    .designer-developer{
+        color: #f5eee6;
+        display: block;
+        margin-top: 4rem;
+        justify-content: space-between;
+        margin-left: 2rem;
+        transition-delay: 1s;
+    }
+    .designer-developer .hidden span{
+        font-size: 2rem;
+        color: bisque;
+    }
+    .designer-developer h1{
+        font-size: 5rem;
+    }
+    .designer-developer div h4{
+        font-size: 1.1rem;
+        margin-top: 3rem;
+        margin-right: 1rem;
+        float: right;
+        text-wrap: balance;
+        font-family: "Neue Montreal", sans-serif;
+    }
+    .designer-developer div h4 span{
+        float: right;
+    }
+    .introduction{
+        display: block;
+        color: #fff;
+        padding-top: 5rem;
+        justify-content: space-around;
+       
+    }
+    .introduction h1{
+        margin-left: 3rem;
+        font-size: 2.8rem;
+    }
+    .introduction h6{
+        color: bisque;
+        font-size: 0.8rem;
+       text-align: right;
+       margin-right: 4rem;
+
+    }
+    
+    .introduction .line{
+        font-size: 1.3rem;
+        margin-right: 1rem;
+        font-family: "Neue Montreal", sans-serif;
+        margin-left: 3rem;
+       float: left;
+    }
+    .projects{
+        margin-top: 8rem;
+        margin-left: 3rem;
+    }
+    .languages i {
+        font-size: 3em;
+        overflow: hidden;
+        margin: 0.8rem;
+    }
+    .languages img{
+        width: 3rem;
+        height: 3rem;
+        margin: 0.8rem;
+    }
+    .selected{
+
+        align-items: center;
+    }
+    .selected h2{
+        font-size: 1.8rem;
+    }
+    .selected img, .hero img{
+        margin-right: 1.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    .project{
+        margin-top: 8rem;
+        display: flex;
+        justify-content: space-around;
+        margin-right: 2rem;
+        flex-wrap: wrap;
+    }
+    .project h1{
+        font-size: 1.5rem;
+        color: #f5eee6;
+        float: left;
+    }
+    .project h5{
+        display: none;
+        
+    }
+    .project img{
+        height: 100%;
+        width: 100%;
+
+        background-color: grey;
+    }
+    .project img:hover{
+        border: 15px solid #000;
+        opacity: 1;
+        transition: all 0.4s ease 0s;
+        mix-blend-mode: exclusion;
+        visibility: visible;
+        z-index: 1;
+    }
+    .project p {
+        width: 20rem;
+        text-wrap: balance;
+        font-weight: 600;
+        color: #f5eee6;
+        line-height: 1.5;
+        float: right;
+       text-align: right;
+    }
+    .yes{
+        display: block;
+        margin-top: 3rem;
+    }
+    #close-btn{
+        width: 2rem;
+        height: 2rem;
+    }
+    .yes h3{
+        color: f5eee6;
+        font-size: 2rem;
+        font-weight: 500;
+        font-family: "Petrona", serif;
+        margin-right: 2rem;
+    }
+    #arrow{
+        display: block;
+        margin-left: 6rem;
+    }
+    .arrow{
+        display: block;
+    }
+    #see-more-page{
+        transition: all 4s;
+       position: static;
+       margin-left: 0;
+       width: 100%;
+       box-shadow: 0 0 10px rgba(0,0,0,.4);
+    }
+    .see-more-header{
+        font-family: "Neue Montreal", sans-serif;
+        display: flex;
+        justify-content: space-between;
+    }
+    .header, .yandutse, .capital_science, .utiva, .cornell_university{
+        display: block;
+        justify-content: space-between;
+        margin: 1rem;
+        font-family: "Neue Montreal", sans-serif;
+        color: f5eee6;
+
+        text-align: left;
+       
+    }
+    .education{
+        display: block;
+    }
+    .education h1{
+        font-size: 3.7rem;
+    }
+    .award{
+        display: none;
+    }
+    .connect{
+        display: block;
+    }
+    .connect h1{
+        font-size: 5rem;
+        margin-top: 2rem;
+    }
+    .connect p{
+        font-size: 2.5rem;
+    }
+    .connect div{
+        flex-wrap: wrap-reverse;
+        overflow-y: hidden;
+    }
+    .mind{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 4rem;
+    }
+    .minding h2{
+        color: #fff;
+        font-family: "Neue Montreal", sans-serif;
+        font-size: 1rem;
+    }
+    .btn-alt{
+        color: #000;
+        background-color: f5eee6;
+        cursor: pointer;
+        font-family: "Neue Montreal", sans-serif;
+        font-weight: 500;
+        font-size: 0.9rem;
+        width: auto;
+        height: auto;
+        padding: 0.3rem 0.7rem;
+        border-radius: 64px;
+        border: none;
+    }
+    .btn-alt:hover{
+        color: #f5eee6;
+        background-color: #000;
+        transition: all 0.4s ease 0s;
+        mix-blend-mode: multiply;
+        visibility: visible;
+        z-index: 1;
+    }
+    .links{
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+    .links a{
+        margin-right: 0.2em;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1100px) {
+    
+    nav{
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        width: 100%;
+        padding: 1.4rem;
+        margin: 0 0;
+        align-items: last baseline;
+    }
+    nav h6{
+        font-size: 1.8rem;
+        
+    }
+    nav div{
+        display: flex;
+    }
+    nav div h6{
+        font-size: 1.4rem;
+       
+    }
+    nav div h4{
+        font-size: 1rem;
+    }
+    nav ul{
+        font-size: 0.9rem;
+        font-family: "Neue Montreal", sans-serif;
+    }
+    .hero{
+        display: flex;
+        justify-content: space-between;
+    }
+    .hero h3{
+        font-size: 2.5rem;
+        margin-top: 12rem;
+        margin-left: 2rem;
+    }
+    .hero div{
+        margin-top: 10rem;
+        margin-right: 4rem;
+    }
+    .hero #day-display{
+        font-size: 10rem;
+        font-family: "Monoton", sans-serif;
+       
+    }
+    .hero #month-display{
+        font-size: 1.4rem;
+        font-weight: 400;
+        margin-left: 0.6rem;
+    }
+    .hero div h4{
+        font-size: 1.2rem;
+        font-weight: 200;
+        margin-left: 0.6rem;
+    }
+    .availability{
+        font-size: 1rem;
+        margin-right: 10rem;
+        font-family: "Neue Montreal", sans-serif;
+        margin-top: -2rem;
+    
+    }
+    .designer-developer{
+        color: #f5eee6;
+        display: block;
+        margin-top: 4rem;
+        justify-content: space-between;
+        margin-left: 3rem;
+        transition-delay: 1s;
+    }
+    .designer-developer h1{
+        font-size: 7rem;
+    }
+    .designer-developer div h4{
+        font-size: 2rem;
+        margin-top: 3rem;
+        margin-right: 1rem;
+        float: right;
+        font-family: "Neue Montreal", sans-serif;
+    }
+    .designer-developer div h4 span{
+        float: right;
+    }
+    .introduction{
+        display: flex;
+        color: #fff;
+        padding-top: 5rem;
+        justify-content: space-around;
+       
+    }
+    .introduction h1{
+        margin-left: 3rem;
+    }
+    .introduction h6{
+        color: bisque;
+        font-size: 0.8rem;
+        float: right;
+
+    }
+    .introduction .line{
+        font-size: 1.3rem;
+        margin-right: 1rem;
+        font-family: "Neue Montreal", sans-serif;
+        margin-left: 3rem;
+       
+    }
+    .introduction img{
+        width: 70%;
+    }
+    .projects{
+        margin-top: 8rem;
+        margin-left: 3rem;
+    }
+    .selected{
+
+        align-items: center;
+    }
+    .selected h2{
+        font-size: 3rem;
+    }
+    .selected img, .hero img{
+        margin-right: 1.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    .project{
+        margin-top: 8rem;
+        display: flex;
+        justify-content: space-around;
+        margin-right: 2rem;
+        
+    }
+    .project h1{
+        font-size: 1.5rem;
+        color: #f5eee6;
+        float: left;
+        padding-bottom: 4rem;
+    }
+    .project h5{
+        display: none;
+        
+    }
+    .project img{
+        height: 100%;
+        width: 100%;
+        background-color: grey;
+    }
+    .project img:hover{
+        border: 15px solid #000;
+        opacity: 1;
+        transition: all 0.4s ease 0s;
+        mix-blend-mode: exclusion;
+        visibility: visible;
+        z-index: 1;
+    }
+    .project p {
+        width: 20rem;
+        text-wrap: balance;
+        font-weight: 600;
+        color: #f5eee6;
+        line-height: 1.5;
+        float: right;
+       text-align: right;
+    }
+    .yes{
+        display: block;
+    }
+    .yes h3{
+        color: f5eee6;
+        font-size: 2rem;
+        font-weight: 500;
+        font-family: "Petrona", serif;
+        margin-right: 2rem;
+    }
+    #arrow{
+        display: block;
+        margin-left: 6rem;
+    }
+    .arrow{
+        display: none
+    }
+    #see-more-page{
+        transition: all 4s;
+       position: static;
+       margin-left: 0;
+       width: 100%;
+       box-shadow: 0 0 10px rgba(0,0,0,.4);
+    }
+    .see-more-header{
+        font-family: "Neue Montreal", sans-serif;
+        display: flex;
+        justify-content: space-between;
+    }
+    .header, .yandutse, .capital_science, .utiva, .cornell_university{
+        display: flex;
+        justify-content: space-between;
+        margin: 1rem;
+        font-family: "Neue Montreal", sans-serif;
+        color: f5eee6;
+        text-align: center;
+        text-align: left;
+       width: 100%;
+    }
+    .education{
+        display: flex;
+    }
+    .education h1{
+        font-size: 3.6rem;
+        color: bisque;
+        font-family: "Anton", sans-serif;
+        font-weight: 400;
+       
+    }
+    .schools h3{
+        font-size: 1.3rem;
+    }
+    .award{
+        display: block;
+    }
+    .connect{
+        display: block;
+    }
+    .connect h1{
+        font-size: 11rem;
+        margin-top: 2rem;
+    }
+    .connect p{
+        font-size: 2.5rem;
+    }
+    .connect div{
+        flex-wrap: wrap-reverse;
+        overflow-y: hidden;
+    }
+    .mind{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 4rem;
+    }
+    .minding h2{
+        color: #fff;
+        font-family: "Neue Montreal", sans-serif;
+        font-size: 2rem;
+    }
+    .btn-alt{
+        color: #000;
+        background-color: f5eee6;
+        cursor: pointer;
+        font-family: "Neue Montreal", sans-serif;
+        font-weight: 500;
+        font-size: 1.4rem;
+        width: auto;
+        height: auto;
+        padding: 0.3rem 0.7rem;
+        border-radius: 64px;
+        border: none;
+    }
+    .btn-alt:hover{
+        color: #f5eee6;
+        background-color: #000;
+        transition: all 0.4s ease 0s;
+        mix-blend-mode: multiply;
+        visibility: visible;
+        z-index: 1;
+    }
+    .links{
+        flex-wrap: wrap;
+        overflow: hidden;
+        font-size: 1.3rem;
+    }
+    .links a{
+        margin: 1rem;
+    }
+}
