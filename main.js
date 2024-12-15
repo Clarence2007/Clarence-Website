@@ -5,9 +5,13 @@ let date = new Date();
 let dayDisplayInput = date.getDate();
 dayDisplay.innerHTML = dayDisplayInput;
 
-var months = ['jan', 'feb', 'mar', 'apr', ',may', 'jun', 'jul', 'sept', 'oct', 'nov', 'dec'];
+// Correct month array
+var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+
+// Get the current month index (0-based) and display the correct month
 let monthDisplayInput = date.getMonth();
 monthDisplay.innerHTML = months[monthDisplayInput];
+
 
 const observer = new IntersectionObserver((entries) =>{
 
